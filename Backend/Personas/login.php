@@ -11,8 +11,10 @@
     try {
         
         $sql = "Select * from peresona where id =".$id." and password = '".$password."';";
-        if($conexionOpen->query($sql)){
-            echo " todo ok";
+        $respuesta =  $conexionOpen->prepare($sql);
+        $respuesta -> execute();
+        if($respuesta -> rowCount() > 0){
+                echo " todo ok";
         }else{
             echo "no hay dato con estos valores";
         }
