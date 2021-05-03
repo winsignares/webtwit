@@ -3,6 +3,13 @@
 ?>
 <form method="POST" action="../Backend/Personas/guardar.php">
     <div class="form-row">
+    <div class="col-md-4 mb-3">
+            <label for="validationDefault01">
+                Identificación
+            </label>
+            <input type="text" class="form-control" id="identificacion" name="identificacion" placeholder="Escribir su identificacion" value=""
+                required>
+        </div>
         <div class="col-md-4 mb-3">
             <label for="validationDefault01">
                 Nombre
