@@ -36,6 +36,7 @@
   
     <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
+<a href="login.php" class="btn btn-primary">login</a>
 <?php
     include_once('Componentes/foot.php');
 ?>

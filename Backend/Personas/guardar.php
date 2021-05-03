@@ -35,5 +35,5 @@
         echo " el error es: ". $e->getMessage();
     }
 
-   
+   $db->close();
 ?>
