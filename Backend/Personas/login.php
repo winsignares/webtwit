@@ -1,5 +1,6 @@
 <?php
     include_once('../Conection.php');
+    session_start();
     $id = 0;
     $password = "";
 
@@ -15,6 +16,9 @@
         $respuesta -> execute();
         if($respuesta -> rowCount() > 0){
                 echo " todo ok";
+                $_SESSION['Id'] = $id;
+                header('Location: http://localhost/workspacephp/webtwit/frontend/Cpanel.php');
+                exit;
         }else{
             echo "no hay dato con estos valores";
         }
