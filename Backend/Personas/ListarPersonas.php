@@ -1,12 +1,13 @@
 <?php
 	// incluye la conexión
-    include_once('../Conection.php');
-    session_start();
-	$database = new Connection();
-	$db = $database->open();
+    include_once('../Backend/Conection.php');
+    //session_start();
+    $db = new Connection();
+    $conexionOpen = $db->open(); 
+	
 	try{	
-	    $sql = 'Select * from Peresona where id !='.$_SESSION['Id'];
-	    foreach ($db->query($sql) as $row) {
+	    $sql = 'Select * from Peresona where Id !='.$_SESSION['Id'];
+	    foreach ($conexionOpen->query($sql) as $row) {
 ?>
 
 <div class="card" style="width: 18rem;">
@@ -16,7 +17,7 @@
         <p class="card-text">
             <?php echo "Descrip"; ?>
         </p>
-        <a href="#add_<?php echo $row['id']; ?>"  class="btn btn-primary">Agregar amigo</a>
+        <a href="#add_<?php echo $row['Id']; ?>"  class="btn btn-primary">Agregar amigo</a>
     </div>
 </div>
 
@@ -26,5 +27,5 @@
 	echo "There is some problem in connection: " . $e->getMessage();
 }
 	//cerrar conexión
-	$database->close();
+	$db->close();
 ?>
