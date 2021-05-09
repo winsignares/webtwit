@@ -15,8 +15,10 @@
         $respuesta =  $conexionOpen->prepare($sql);
         $respuesta -> execute();
         if($respuesta -> rowCount() > 0){
+                $row = $respuesta->fetch();
                 echo " todo ok";
                 $_SESSION['Id'] = $id;
+                $_SESSION['Nombre'] = $row['Nombre'];
                 header('Location: http://localhost/workspacephp/webtwit/frontend/Cpanel.php');
                 exit;
         }else{

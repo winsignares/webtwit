@@ -3,7 +3,7 @@
 ?>
 <?php 
         session_start();
-        echo "Hola ". $_SESSION['Id'];        
+        echo "Hola ". $_SESSION['Nombre'];        
     ?>
 <br />
 
