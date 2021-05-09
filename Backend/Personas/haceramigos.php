@@ -6,17 +6,17 @@
     $db = new Connection();
     $conexionOpen = $db->open(); 
     $estado = "Pendiente";
-    $fecha = getdate();
-    try {
-        
-        $resultado = $conexionOpen->prepare("Insert into amigos ( Id_Persona_envia_Fk,Id_Persona_Reci_Fk,Estado,Fecha_Solicitud ) values (:idPE,:idPR,:E,:F); ");
+    $fecha = (new DateTime('NOW'))->format('Y-m-d H:m:s');
+
+    try {        
+        $resultado = $conexionOpen->prepare("insert into amigos (Id_Persona_envia_Fk, Id_Persona_Reci_Fk, Estado, Fecha_Solicitud) values (:idPE, :idPR, :E, :F);");
         $resultado->execute(
-                            array(
-                                ':idPE'=> $id_del_que_invia,
-                                ':idPR' => $id_amigos,
-                                ':E' => $estado,
-                                ':F' => $fecha
-                            )
+            array(
+                ':idPE'=> $id_del_que_invia,
+                ':idPR' => $id_amigos,
+                ':E' => $estado,
+                ':F' => $fecha,
+            )
         );
 
         echo "datos almacenados con exito";
