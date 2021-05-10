@@ -4,7 +4,9 @@
 <?php 
         session_start();
         echo "Hola ". $_SESSION['Nombre'];        
-    ?>
+?>
+<a href="http://localhost/workspacephp/webtwit/backend/Personas/CerrarSesion.php" class="btn btn-primary">Cerrar Sesión</a>
+
 <br />
 
 
