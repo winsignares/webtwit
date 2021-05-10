@@ -51,6 +51,10 @@
 
 <body>
 <?php 
-        session_start();
-        echo "Hola ". $_SESSION['Nombre'];        
+    session_start();
+    if(isset($_SESSION['Id'])){
+        
+        echo "Hola ". $_SESSION['Nombre'];    
+    }
+            
 ?>
