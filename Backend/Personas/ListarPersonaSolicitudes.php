@@ -26,7 +26,7 @@
         <p class="card-text">
             <?php echo "Descrip"; ?>
         </p>
-        <a href="http://localhost/workspacephp/webtwit/backend/Personas/haceramigos.php?id_Amigo=<?php echo $row['Id']; ?>"  class="btn btn-danger">
+        <a href="http://localhost/workspacephp/webtwit/backend/Personas/ActualizaSolicitud.php?id_Amigo=<?php echo $row['Id']; ?>"  class="btn btn-danger">
             Pendiente
         </a>
     </div>
