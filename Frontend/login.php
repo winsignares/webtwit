@@ -2,6 +2,7 @@
     include_once('Componentes/head.php');
 ?>
 <form method="POST" action="../Backend/Personas/login.php">
+<div class="vidrio">
     <div class="form-row">
     <div class="col-md-4 mb-3">
             <label for="validationDefault01">
@@ -17,7 +18,7 @@
                 required>
         </div>
      
-  
+</div>
     <button class="btn btn-primary" type="submit">login</button>
 </form>
 
