@@ -12,7 +12,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-      <link href="assets/img/tooth.png" rel="icon">
+    <link href="assets/img/tooth.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -50,11 +50,27 @@
 </head>
 
 <body>
-<?php 
+    <?php 
     session_start();
     if(isset($_SESSION['Id'])){
         
         echo "Hola ". $_SESSION['Nombre'];    
+        ?>
+        <a href="http://localhost/workspacephp/webtwit/backend/Personas/CerrarSesion.php" class="btn btn-primary">Cerrar Sesión</a>
+        <h2> 
+            Solicitudes 
+            <a href="" class="btn btn-primary">
+            #
+                <?php 
+                  //  require_once('http://localhost/workspacephp/webtwit/backend/Personas/CantidadSolicitud.php');
+                ?>
+            </a>
+        </h2>
+        <h2> 
+            <a href="addPensamiento.php" class="btn btn-primary">Realizar un pensamiento </a>
+        </h2>
+        
+    <?php 
     }
             
 ?>
