@@ -13,7 +13,7 @@
             if($idAmigo == $_SESSION['Id'] ){
                 $idAmigo = $row['Id_Persona_envia_Fk']; 
             }
-            $sql2 = "SELECT * FROM pensamientos where id_persona_fk = ".$idAmigo;
+            $sql2 = "SELECT * FROM pensamientos where id_persona_fk = ".$idAmigo." or id_persona_fk = ".$_SESSION['Id'] ;
            // echo $sql2;
            
             foreach ($conexionOpen->query($sql2) as $row2) {

@@ -25,7 +25,7 @@
 
         echo "datos almacenados con exito";
         
-        header('Location: http://localhost/workspacephp/webtwit/frontend/Cpanel.php');
+        header('Location: http://localhost/workspacephp/webtwit/frontend/addPensamiento.php');
     } catch (PDOException $e) {
         echo " el error es: ". $e->getMessage();
     }
