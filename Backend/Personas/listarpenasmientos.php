@@ -1,7 +1,7 @@
 <?php
 	// incluye la conexión
-    include_once('../Backend/Conection.php');
-    //session_start();
+    include_once('../../Backend/Conection.php');
+    session_start();
     $db = new Connection();
     $conexionOpen = $db->open(); 
 	

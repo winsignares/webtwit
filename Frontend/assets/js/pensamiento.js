@@ -19,7 +19,7 @@ $( document ).ready(function() {
             success: function(data) {
                         //var obj = jQuery.parseJSON(data); if the dataType is not specified as json uncomment this
                         // do what ever you want with the server response
-                    alert(data)   
+                   $("#listarpensamiento").load('../Backend/Personas/listarpenasmientos.php');
                 },
             error: function() {
                         alert('se presento algun error');

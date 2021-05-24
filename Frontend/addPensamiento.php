@@ -14,11 +14,10 @@
 </form>
 
     <br />
-    <input id="Nombre" type="text" placeholder="Escribir su nombre" />
-    <button class="btn btn-primary" id="saludar" >Saludar</button>
-    <?php 
-    include_once('../Backend/Personas/listarpenasmientos.php');
-?>
+  <div id="listarpensamiento">
+
+  </div>
+    
 <script src="assets/js/pensamiento.js"></script>
 <?php 
     include_once('Componentes/foot.php');
