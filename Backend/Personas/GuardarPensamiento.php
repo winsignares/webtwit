@@ -8,7 +8,7 @@
     $id = $_SESSION['Id'];
     $Pesamiento = $_POST['Pensamiento'];
     $fecha = (new DateTime('NOW'))->format('Y-m-d H:m:s');
-
+    //echo $Pesamiento;
     $db = new Connection();
     $conexionOpen = $db->open(); 
 
@@ -25,7 +25,7 @@
 
         echo "datos almacenados con exito";
         
-        header('Location: http://localhost/workspacephp/webtwit/frontend/addPensamiento.php');
+        //header('Location: http://localhost/workspacephp/webtwit/frontend/addPensamiento.php');
     } catch (PDOException $e) {
         echo " el error es: ". $e->getMessage();
     }
